@@ -1,13 +1,8 @@
 # Don't use normal gcc, use the arm cross compiler
 CC = arm-none-eabi-gcc
 
-# Set any constants based on the raspberry pi model.  Version 1 has some differences to 2 and 3
-ifeq ($(RASPI_MODEL),1)
-	CPU = arm1176jzf-s
-	DIRECTIVES = -D MODEL_1
-else
-	CPU = cortex-a7
-endif
+CPU = cortex-a7
+
 
 CFLAGS= -mcpu=$(CPU) -fpic -ffreestanding $(DIRECTIVES)
 CSRCFLAGS= -O2 -Wall -Wextra

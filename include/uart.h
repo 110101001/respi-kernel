@@ -1,8 +1,15 @@
 #ifndef __UART_H_
 #define __UART_H_
 
-#include "base_address.h"
+#include "mmio.h"
 #include "gpio.h"
+
+#define UART0_BASE LMA2PHY(0x7E201000)
+//UART1 is not PL011 UARTS
+#define UART2_BASE LMA2PHY(0x7E201400)
+#define UART3_BASE LMA2PHY(0x7E201600)
+#define UART4_BASE LMA2PHY(0x7E201800)
+#define UART5_BASE LMA2PHY(0x7E201A00)
 
 typedef struct
 {
@@ -29,6 +36,8 @@ typedef struct
     r32 itip;
     r32 itop;
     r32 tdr;
-} uart_reg;
+} uart_t;
+
+
 
 #endif

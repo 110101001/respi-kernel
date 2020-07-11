@@ -38,6 +38,42 @@ typedef struct
     r32 tdr;
 } uart_t;
 
+const int uart_tx_pins[]={
+    36,
+    32,
+    0,
+    4,
+    8,
+    12,
+};
 
+const int uart_rx_pins[]={
+    37,
+    33,
+    1,
+    5,
+    9,
+    13,
+};
+
+const int uart_tx_pins_func[]={
+    2,
+    5,
+    4,
+    4,
+    4,
+    4,
+};
+
+const int uart_rx_pins_func[]={
+    2,
+    5,
+    4,
+    4,
+    4,
+    4,
+};
+
+void uart_init(uart_t *u);
 
 #endif

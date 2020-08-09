@@ -42,7 +42,7 @@ typedef struct
     r32 gppupr[4]; // short for GPIO_PUP_PDN_CNTRL_REG
 } gpio_t;
 
-gpio_t *gpio=(gpio_t *)GPIO_BASE;
+extern gpio_t *gpio;
 
 void gpio_select_func(pin_t pin, u8 func);
 
